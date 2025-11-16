@@ -1,0 +1,252 @@
+/* ==========================================================
+   💙 Thème ADMIN — EXP Santé
+   Style uniforme pour :
+   - Tableau de bord
+   - Évaluations
+   - Questions
+   - Statistiques
+   - Diagnostic
+========================================================== */
+
+/* 🌤️ Fond général des pages EXP Santé */
+.wp-admin.toplevel_page_exp_sante_dashboard #wpcontent,
+.wp-admin.exp-sante_page_hospital_evaluations #wpcontent,
+.wp-admin.exp-sante_page_hospital_questions #wpcontent,
+.wp-admin.exp-sante_page_hospital_diagnostic #wpcontent,
+.wp-admin.exp-sante_page_hospital_statistics #wpcontent {
+  background: linear-gradient(90deg, #003fff 0%, #04ffec 100%);
+  color: #1e293b;
+  padding: 30px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Conteneur principal */
+.wrap.exp-sante-page {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* ==========================================================
+   🧩 Titres et en-têtes
+========================================================== */
+.wrap.exp-sante-page h1 {
+    font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #fff;
+}
+.wrap.exp-sante-page h2 , .wrap.exp-sante-page h3 {
+  color: #1565c0;
+}
+
+
+
+.wrap.exp-sante-page h1 {
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.wrap.exp-sante-page h2 {
+  font-size: 1.5em;
+  margin-top: 25px;
+}
+
+.wrap.exp-sante-page h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================
+   🧱 Cards uniformisées
+========================================================== */
+.exp-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border: 1px solid #dce7f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.the-card { background: #fff; border: 1px solid #d1d5db; border-radius: 10px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom:2rem;}
+
+/* ==========================================================
+   📊 Tableaux
+========================================================== */
+.exp-sante-page table.widefat {
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.exp-sante-page table.widefat thead th {
+  background: #1565c0;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 3px solid #0d47a1;
+  text-align: center;
+}
+.exp-sante-page table.widefat td {
+  background: #fff;
+  text-align: center;
+  padding: 8px 10px;
+}
+.exp-sante-page table.widefat tr:hover td {
+  background: #f1f5ff;
+}
+
+/* ==========================================================
+   🧮 Formulaires
+========================================================== */
+.exp-sante-page input[type="text"],
+.exp-sante-page textarea,
+.exp-sante-page select {
+  border: 1px solid #c5d5ef;
+  border-radius: 6px;
+  padding: 6px 10px;
+  width: 100%;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.exp-sante-page input[type="text"]:focus,
+.exp-sante-page textarea:focus,
+.exp-sante-page select:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.15);
+  outline: none;
+}
+
+/* ==========================================================
+   🔘 Boutons cohérents
+========================================================== */
+.exp-sante-page .button-primary {
+  background-color: #1565c0 !important;
+  border-color: #1565c0 !important;
+  color: #fff !important;
+  border-radius: 6px;
+  padding: 7px 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.exp-sante-page .button-primary:hover {
+  background-color: #0b4da2 !important;
+}
+.exp-sante-page .button-secondary {
+  background-color: #e3f2fd !important;
+  color: #0d47a1 !important;
+  border-radius: 6px;
+  padding: 6px 14px;
+  border: 1px solid #90caf9;
+  transition: all 0.2s ease;
+}
+.exp-sante-page .button-secondary:hover {
+  background-color: #d2e9ff !important;
+}
+
+/* ==========================================================
+   📈 Graphiques
+========================================================== */
+.he-chart-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.he-chart-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  background: #fff;
+  border: 1px solid #dbe3f0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+canvas {
+  max-width: 270px !important;
+  max-height: 270px !important;
+}
+
+/* ==========================================================
+   🩺 Statistiques et Dashboard
+========================================================== */
+.he-stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.he-card {
+  background: #fff;
+  border: 1px solid #dbe3f0;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.he-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+.he-card-icon {
+  font-size: 32px;
+  margin-right: 15px;
+  color: #1565c0;
+}
+.he-card-content {
+  flex: 1;
+}
+.he-card-title {
+  font-weight: 600;
+  color: #1e40af;
+}
+.he-card-number {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 3px;
+  color: #1565c0;
+}
+
+/* ==========================================================
+   ⚠️ Alertes et Messages
+========================================================== */
+.exp-alert {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.exp-alert.success {
+  background: #e8f5e9;
+  border: 1px solid #81c784;
+  color: #2e7d32;
+}
+.exp-alert.warning {
+  background: #fff8e1;
+  border: 1px solid #ffd54f;
+  color: #b28704;
+}
+.exp-alert.error {
+  background: #ffebee;
+  border: 1px solid #ef5350;
+  color: #b71c1c;
+}
+
+/* ==========================================================
+   ⚙️ Utilitaires
+========================================================== */
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }

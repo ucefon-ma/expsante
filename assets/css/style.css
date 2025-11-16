@@ -1,0 +1,321 @@
+/* ====== GENERAL STYLING ====== */
+.he-form, .he-dashboard {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #1e1e1e;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 35px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+/* ====== TITLES ====== */
+.he-form h3, .he-dashboard h2 {
+  color: #0d47a1;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.he-form h3 strong {
+  color: #1565c0;
+}
+
+/* ====== QUESTIONS ====== */
+.he-form .question {
+  background: #f9f9fc;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+  border: 1px solid #e4e4ef;
+  transition: all 0.2s ease-in-out;
+}
+.he-form .question:hover {
+  background: #f0f4ff;
+  border-color: #c5d2f5;
+}
+
+.he-form .question p {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.he-form label {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+
+
+/* ====== TABLEAU DE BORD ====== */
+.he-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.he-dashboard th  {
+  background: #0d47a1;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+}
+
+.he-dashboard td {
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.he-dashboard tr:nth-child(even) td {
+  background: #f8faff;
+}
+
+.he-dashboard tr:hover td {
+  background: #eef3ff;
+}
+
+.he-dashboard strong {
+  color: #1565c0;
+}
+
+/* ====== STAT BOX ====== */
+.stats-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  background: #f5f8ff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e3e8ff;
+}
+.stats-box span {
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+
+
+.he-score-details table th {
+  background: #0d47a1;
+  color: #fff;
+}
+
+.he-score-details table th, 
+.he-score-details table td {
+  padding: 6px 10px;
+  text-align: left;
+}
+.he-score-details {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.he-dashboard h3 {
+  font-size:20px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   💙 EXP Santé — Formulaire d’évaluation
+========================================================== */
+
+.he-form {
+  background: #fff;
+  border: 1px solid #dce7f7;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.he-form-title {
+  color: #1565c0;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.he-chapter-title {
+  color: #0d47a1;
+  border-bottom: 2px solid #e3f2fd;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+.he-question {
+  margin-bottom: 20px;
+}
+
+.he-question-text {
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+/* ==========================================================
+   🎯 Radios modernes EXP Santé (corrigé)
+========================================================== */
+.he-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.he-radio-group label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 2px solid #cbd5e1;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #1e293b;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease;
+  min-width: 70px;
+  text-align: center;
+}
+
+.he-radio-group input[type="radio"] {
+  display: none;
+}
+
+/* ✅ Bouton sélectionné */
+.he-radio-group input[type="radio"]:checked + span {
+  background: #1565c0;
+  color: #fff !important;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.25);
+  
+}
+
+/* ✨ Hover doux */
+.he-radio-group label:hover span {
+  background: #e0f2fe;
+  border-color: #0ea5e9;
+  color: #0b4da2;
+}
+
+/* 👁️ Transition fluide */
+.he-radio-group span {
+  border-radius: 50px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.25s ease;
+  padding: 4px 14px 1px 14px;
+  font-size:15px;
+}
+
+/* 🧠 Focus accessible */
+.he-radio-group input[type="radio"]:focus + span {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+
+/* 🔘 Boutons navigation */
+.he-step-nav {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.he-step-nav button {
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#hePrev {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+#hePrev:hover {
+  background-color: #cbd5e1;
+}
+
+#heNext {
+  background-color: #1565c0;
+  color: #fff;
+}
+
+#heNext:hover {
+  background-color: #0b4da2;
+}
+
+#heSubmit {
+  background-color: #10b981;
+  color: #fff;
+}
+
+#heSubmit:hover {
+  background-color: #059669;
+}
+
+/* ✅ Animation sur clic */
+.he-step-nav button:active {
+  transform: scale(0.97);
+}
+
+
+/* ====== PROGRESS BAR ====== */
+.progress-container {
+  background: #e0e7ff;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+  margin-bottom: 15px;
+}
+.progress-bar {
+  height: 8px;
+  background: linear-gradient(90deg, #42a5f5, #1565c0);
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+
+
+
+.he-chapter-status {
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 3px;
+  display: inline-block;
+  font-weight: 600;
+}
+.he-chapter-status.done { background: #10B981; color: #fff; }
+.he-chapter-status.pending { background: #DC2626; color: #fff; }
+
+.he-radio input[type="radio"] { display: none; }
+
+.he-radio input[type="radio"]:checked + span {
+  background: #1565c0;
+  color: #fff;
+  border-color: #1565c0;
+}
+span.he-chapter-status.pending , span.he-chapter-status.done{
+    font-size:12px;
+}
+#heChapterStatus {
+    margin-bottom: 1rem;
+}
+
+
