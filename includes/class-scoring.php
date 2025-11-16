@@ -3,12 +3,12 @@ if (!defined('ABSPATH')) exit;
 
 /**
  * Classe HE_Scoring
- * Calcule et met en cache le score d'une évaluation hospitalière
+ * Calcule et met en cache le score d'une Ã©valuation hospitaliÃ¨re
  */
 class HE_Scoring {
 
     /**
-     * Calcule (ou récupère) le score d'une évaluation
+     * Calcule (ou rÃ©cupÃ¨re) le score d'une Ã©valuation
      */
     public static function calculate_score($evaluation_id) {
         global $wpdb;
@@ -20,13 +20,13 @@ class HE_Scoring {
 
         $cache_key = 'he_score_' . $evaluation_id;
 
-        // Vérifie d'abord dans le cache transient
+        // VÃ©rifie d'abord dans le cache transient
         $cached = get_transient($cache_key);
         if ($cached !== false) {
             return floatval($cached);
         }
 
-        // Récupère toutes les réponses de cette évaluation
+        // RÃ©cupÃ¨re toutes les rÃ©ponses de cette Ã©valuation
         $answers = $wpdb->get_results($wpdb->prepare("
             SELECT a.reponse, q.poids 
             FROM {$wpdb->prefix}hospital_answers a
@@ -37,11 +37,11 @@ class HE_Scoring {
         ", $evaluation_id));
 
         if (empty($answers)) {
-            error_log("[HE_SCORE] Aucune réponse trouvée pour évaluation $evaluation_id");
+            error_log("[HE_SCORE] Aucune rÃ©ponse trouvÃ©e pour Ã©valuation $evaluation_id");
             return 0;
         }
 
-        // Calcul du score pondéré - N/A EXCLUS
+        // Calcul du score pondÃ©rÃ© - N/A EXCLUS
         $total_poids = 0;
         $scored_poids = 0;
         $count_oui = 0;
@@ -67,7 +67,7 @@ class HE_Scoring {
 
         $score = $total_poids > 0 ? round(($scored_poids / $total_poids) * 100, 2) : 0;
 
-        // Mise à jour du score dans la base
+        // Mise Ã  jour du score dans la base
         $wpdb->update(
             "{$wpdb->prefix}hospital_evaluations",
             [
@@ -85,17 +85,17 @@ class HE_Scoring {
         // Met le score en cache pour 12 heures
         set_transient($cache_key, $score, 12 * HOUR_IN_SECONDS);
 
-        error_log("[HE_SCORE] Score calculé pour eval #$evaluation_id = $score% (Oui:$count_oui Non:$count_non N/A:$count_na exclus)");
+        error_log("[HE_SCORE] Score calculÃ© pour eval #$evaluation_id = $score% (Oui:$count_oui Non:$count_non N/A:$count_na exclus)");
         
         return $score;
     }
 
     /**
-     * Supprime le cache d'une évaluation
+     * Supprime le cache d'une Ã©valuation
      */
     public static function clear_cache($evaluation_id) {
         delete_transient('he_score_' . intval($evaluation_id));
-        error_log("[HE_SCORE] Cache vidé pour évaluation #$evaluation_id");
+        error_log("[HE_SCORE] Cache vidÃ© pour Ã©valuation #$evaluation_id");
     }
 
     /**
@@ -120,7 +120,7 @@ class HE_Scoring {
             $count++;
         }
         
-        error_log("[HE_SCORE] $count scores recalculés avec succès");
+        error_log("[HE_SCORE] $count scores recalculÃ©s avec succÃ¨s");
         return $count;
     }
 }
