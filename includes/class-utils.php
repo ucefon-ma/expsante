@@ -189,9 +189,10 @@ class HE_Utils {
     public static function get_score_color($score) {
         $score = floatval($score);
         
-        if ($score >= 75) {
+            // STANDARD STRICT
+        if ($score >= 80) {
             return 'success'; // Vert
-        } elseif ($score >= 50) {
+        } elseif ($score >= 60) {
             return 'warning'; // Orange
         } else {
             return 'danger'; // Rouge
@@ -206,11 +207,12 @@ class HE_Utils {
     public static function get_score_label($score) {
         $score = floatval($score);
         
-        if ($score >= 75) {
+            // STANDARD STRICT (Recommandé pour hôpitaux)
+        if ($score >= 80) {
             return 'Excellent';
-        } elseif ($score >= 50) {
+        } elseif ($score >= 60) {
             return 'Bon';
-        } elseif ($score >= 25) {
+        } elseif ($score >= 40) {
             return 'À améliorer';
         } else {
             return 'Critique';
